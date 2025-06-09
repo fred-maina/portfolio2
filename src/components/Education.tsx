@@ -1,4 +1,3 @@
-import React from 'react';
 import AnimatedSection from './AnimatedSection';
 import { education, certifications } from '../data';
 import { GraduationCap, CheckCircle, ExternalLink } from 'lucide-react';
