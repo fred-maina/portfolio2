@@ -1,0 +1,7 @@
+.site-footer {
+    background-color: hsl(var(--background));
+    color: hsl(var(--muted-foreground));
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 1px solid hsl(var(--border) / 0.7);
+  }

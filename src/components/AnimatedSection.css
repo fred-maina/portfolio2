@@ -1,0 +1,46 @@
+.animated-section {
+    padding-top: 5rem;    /* py-20 */
+    padding-bottom: 5rem; /* py-20 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    opacity: 0;
+    transform: translateY(3rem); /* translate-y-12 */
+  }
+  
+  .animated-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .animated-section .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;   /* px-4 */
+    padding-right: 1rem;  /* px-4 */
+  }
+  
+  /* Responsive Padding */
+  @media (min-width: 640px) {
+    .animated-section {
+      padding-top: 7rem;    /* md:py-28 */
+      padding-bottom: 7rem; /* md:py-28 */
+    }
+    .animated-section .container {
+      padding-left: 1.5rem; /* sm:px-6 */
+      padding-right: 1.5rem;/* sm:px-6 */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .animated-section .container {
+      padding-left: 2.5rem; /* md:px-10 */
+      padding-right: 2.5rem;/* md:px-10 */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .animated-section .container {
+      padding-left: 4rem; /* lg:px-16 */
+      padding-right: 4rem;/* lg:px-16 */
+    }
+  }

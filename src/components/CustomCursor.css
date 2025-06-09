@@ -1,0 +1,20 @@
+.custom-cursor {
+    position: fixed;
+    width: 0.75rem; /* w-3 */
+    height: 0.75rem; /* h-3 */
+    background-color: hsl(var(--primary));
+    border-radius: 9999px; /* rounded-full */
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-out;
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+    display: none; /* hidden by default */
+  }
+  
+  /* Show cursor only on medium screens and up */
+  @media (min-width: 768px) {
+    .custom-cursor {
+      display: block;
+    }
+  }

@@ -1,0 +1,99 @@
+.contact-section {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  
+  .contact-section .section-title {
+    margin-bottom: 3rem;
+  }
+  
+  .contact-card {
+    max-width: 42rem; /* max-w-xl */
+    margin: 0 auto;
+    text-align: center;
+    background-color: hsl(var(--muted) / 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border: 1px solid hsl(var(--border) / 0.5);
+    backdrop-filter: blur(4px);
+  }
+  
+  .contact-intro {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: hsl(var(--foreground));
+  }
+  
+  .contact-links {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    color: hsl(var(--primary));
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-link-item:hover {
+    color: hsl(var(--primary) / 0.9);
+  }
+  .contact-link-item:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px hsl(var(--primary));
+    border-radius: 2px;
+  }
+  
+  .contact-icon {
+    margin-right: 0.75rem;
+    transition: transform 0.3s;
+  }
+  
+  .contact-link-item:hover .contact-icon {
+    transform: scale(1.1);
+  }
+  
+  .contact-link-item:hover .phone-icon {
+    transform: rotate(12deg);
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .social-icon-link {
+    color: hsl(var(--muted-foreground));
+    transition: all 0.3s;
+  }
+  
+  .social-icon-link:hover {
+    color: hsl(var(--primary));
+    transform: scale(1.25);
+  }
+  
+  .social-icon-github {
+    width: 1.75rem !important; /* !w-7 */
+    height: 1.75rem !important; /* !h-7 */
+    margin-right: 0 !important; /* !mr-0 */
+  }
+  
+  @media (min-width: 640px) {
+    .contact-card {
+      padding: 3rem;
+    }
+    .contact-link-item {
+      font-size: 1.25rem;
+    }
+    .social-links {
+      gap: 2rem;
+    }
+  }
