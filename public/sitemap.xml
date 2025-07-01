@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.fredmaina.com/</loc>
+    <lastmod>2025-07-01</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fredmaina.com/#about</loc>
+    <lastmod>2025-07-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fredmaina.com/#experience</loc>
+    <lastmod>2025-07-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fredmaina.com/#projects</loc>
+    <lastmod>2025-07-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fredmaina.com/#skills</loc>
+    <lastmod>2025-07-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fredmaina.com/#education</loc>
+    <lastmod>2025-07-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fredmaina.com/#contact</loc>
+    <lastmod>2025-07-01</lastmod>
+    <priority>0.95</priority>
+  </url>
+
+</urlset>
