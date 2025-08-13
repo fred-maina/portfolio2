@@ -7,7 +7,7 @@ export const contactDetails = {
   github: 'https://github.com/fred-maina',
   linkedin: 'https://www.linkedin.com/in/fredmaina',
   website: 'https://www.fredmaina.com',
-  resumeUrl: 'https://drive.google.com/file/d/1ZLaOS4lp8D3KyXBfZQfLmvhPheY3MvFA/view?usp=sharing',
+  resumeUrl: 'https://drive.google.com/file/d/1vCo06oCmQvS8yFMRFmvXU9oBLN51bfmC/view?usp=sharing',
 };
 
 export const userSummary = {
