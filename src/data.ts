@@ -17,6 +17,17 @@ export const userSummary = {
 
 export const experiences = [
   {
+    role: 'Technical Data Fellow',
+    company: 'Dalberg Data Insights',
+    period: 'August 2025 - Present',
+    points: [
+      'Built and automated data pipelines to streamline ingestion and transformation of large datasets from multiple sources.',
+      'Applied statistical and machine learning techniques to analyze datasets and uncover actionable insights.',
+      'Developed custom dashboards and reports for development-focused projects, enabling data-driven decision-making.',
+      'Collaborated with project teams to design experiments, optimize algorithms, and improve project outcomes.',
+    ],
+  },
+  {
     role: 'Software Engineering Intern',
     company: 'Twiga Foods',
     period: 'March 2025 - Current',
