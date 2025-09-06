@@ -30,7 +30,7 @@ export const experiences = [
   {
     role: 'Software Engineering Intern',
     company: 'Twiga Foods',
-    period: 'March 2025 - Current',
+    period: 'March 2025 - August 2025',
     points: [
       'Designed and containerized backend services in Python and Java, using GraphQL and REST APIs; deployed via Kubernetes (GKE) as part of a scalable microservices-based Warehouse Management System.',
       'Integrated database migrations into Kubernetes using init containers, making schema changes predictable and safe; reduced migration-related issues by ~80%.',
