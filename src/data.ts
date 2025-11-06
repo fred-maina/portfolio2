@@ -174,5 +174,6 @@ export const iconUrls: { [key: string]: string } = {
   "microservices": "https://cdn-icons-png.flaticon.com/512/4248/4248443.png",
   "vercel":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg",
   "NGINX Ingress":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg",
-  "Cloud Run":"https://www.svgrepo.com/show/353807/google-cloud-run.svg"
+  "Cloud Run":"https://www.svgrepo.com/show/353807/google-cloud-run.svg",
+  "Fast api":"https://cdn.worldvectorlogo.com/logos/fastapi.svg"
 };
