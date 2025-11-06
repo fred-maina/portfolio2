@@ -7,7 +7,7 @@ export const contactDetails = {
   github: 'https://github.com/fred-maina',
   linkedin: 'https://www.linkedin.com/in/fredmaina',
   website: 'https://www.fredmaina.com',
-  resumeUrl: 'https://drive.google.com/file/d/1vCo06oCmQvS8yFMRFmvXU9oBLN51bfmC/view?usp=sharing',
+  resumeUrl: 'https://drive.google.com/file/d/1Sfc09ern3ptyVQTsco7NuOhECL8zuPZM/view?usp=sharing',
 };
 
 export const userSummary = {
@@ -21,10 +21,11 @@ export const experiences = [
     company: 'Dalberg Data Insights',
     period: 'August 2025 - Present',
     points: [
-      'Built and automated data pipelines to streamline ingestion and transformation of large datasets from multiple sources.',
-      'Applied statistical and machine learning techniques to analyze datasets and uncover actionable insights.',
-      'Developed custom dashboards and reports for development-focused projects, enabling data-driven decision-making.',
-      'Collaborated with project teams to design experiments, optimize algorithms, and improve project outcomes.',
+      'Designed and deployed backend systems for Generative AI and chatbot projects using FastAPI, PostgreSQL, and Redis queues.',
+      'Migrated chatbot architectures from OpenAI’s beta Assistants API to the Responses API, improving reliability andlatency.',
+      'Built vector search and context retrieval tools for enhanced AI reasoning and semantic query performance.',
+      'Developed an OCR system with Google Vision API, reducing contract processing time by nearly 50%.',
+      'Set up a secure VPN solution to protect internal APIs and streamline collaboration across distributed teams',
     ],
   },
   {
@@ -68,7 +69,7 @@ export const certifications = [
 export const skills = {
   languages: ['Java', 'Python', 'JavaScript', 'C++', 'Ruby', 'Go'],
   frontend: ['React', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS'],
-  backend: ['Spring Boot', 'Django', 'Quarkus', 'Node.js'],
+  backend: ['Spring Boot', 'Django', 'Quarkus', 'Node.js','Fast api'],
   databases: ['MySQL', 'PostgreSQL', 'Redis'],
   cloud: ['AWS', 'EC2', 'S3', 'RDS', 'Lambda', 'Elastic Beanstalk', 'GCP', 'GKE', 'Cloud Run', 'Heroku'],
   auth: ['JWT', 'OAuth2', 'Spring Security'],
