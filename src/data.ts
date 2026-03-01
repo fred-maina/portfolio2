@@ -17,9 +17,23 @@ export const userSummary = {
 
 export const experiences = [
   {
-    role: 'Technical Data Fellow',
+    role: 'Junior Data Scientist',
     company: 'Dalberg Data Insights',
-    period: 'August 2025 - Present',
+    period: 'March 2026 - Present',
+    points: [
+      'Translated business and client questions into structured analytical tasks and well-defined technical issues.',
+      'Explored, cleaned, and validated diverse datasets, documenting key assumptions and limitations to ensure data integrity.',
+      'Developed and iterated on modular codebases to produce client-ready insights, data visualizations, and detailed project documentation.',
+      'Took ownership of assigned workstreams by estimating effort, executing analysis, and communicating progress and risks early.',
+      'Contributed to the implementation of data pipelines and supported their integration with internal APIs for production use.',
+      'Identified opportunities to improve workflow efficiency, such as creating standardized report templates or automated validation checks.',
+      'Debugged and resolved technical issues from bug reports or failing jobs, identifying root causes and implementing robust fixes.',
+    ],
+  },
+  {
+    role: 'AI Engineering Fellow',
+    company: 'Dalberg Data Insights',
+    period: 'August 2025 - February 2026',
     points: [
       'Designed and deployed backend systems for Generative AI and chatbot projects using FastAPI, PostgreSQL, and Redis queues.',
       'Migrated chatbot architectures from OpenAI’s beta Assistants API to the Responses API, improving reliability andlatency.',
