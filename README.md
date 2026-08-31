@@ -54,6 +54,7 @@ The site records these custom events:
 
 - `view_cv`
 - `book_coffee`
+- `open_booking_page` for the mobile Google Calendar handoff
 - `view_available_times`
 - `view_project` with a `project` parameter
 - `contact_email`

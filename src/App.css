@@ -32,3 +32,7 @@
 
 .hero .portrait{max-width:590px;margin-left:-.5vw;margin-right:clamp(12px,2vw,36px)}.hero-intro{font-size:clamp(1.12rem,1.62vw,1.4rem);line-height:1.58}.current{padding-top:1.3rem;padding-bottom:1.3rem;font-size:.9rem;line-height:1.5}.current strong{font-size:.72rem}
 @media(max-width:800px){.hero .portrait{width:min(88vw,480px);max-width:none;margin:0 auto 0 -2vw}.current{padding-top:1.15rem;padding-bottom:1.15rem;font-size:.86rem}}
+
+/* The Google appointment embed is desktop-only; phones get Google's full booking UI. */
+.mobile-booking-card{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.4rem;gap:1rem}.mobile-booking-card h3{font-family:"Instrument Serif",Georgia,serif;font-size:1.75rem;font-weight:400;margin:0 0 .5rem}.mobile-booking-card p{color:var(--soft);font-size:.9rem;line-height:1.55;margin:0}.mobile-booking-card a{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--ink);color:#fff;padding:1rem;text-decoration:none}
+@media(max-width:800px){.desktop-booking-link,.booking-shell{display:none}.mobile-booking-card{display:grid;grid-template-columns:auto 1fr;margin-top:2.5rem}.coffee-section{padding-bottom:clamp(72px,10vw,100px)}}

@@ -1,6 +1,7 @@
 type AnalyticsEvent =
   | 'view_cv'
   | 'book_coffee'
+  | 'open_booking_page'
   | 'view_available_times'
   | 'view_project'
   | 'contact_email'
