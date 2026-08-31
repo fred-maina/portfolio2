@@ -18,7 +18,7 @@ declare global {
 }
 
 const measurementId =
-  import.meta.env.VITE_GA_MEASUREMENT_ID?.trim() || 'G-KGPV4QZLKS';
+  import.meta.env.VITE_GA_MEASUREMENT_ID?.trim() || 'G-0KEFVWQ33N';
 
 export function initializeAnalytics() {
   if (!measurementId || typeof window === 'undefined' || window.gtag) return;

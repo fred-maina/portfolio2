@@ -46,7 +46,7 @@ npm audit
 
 ## Google Analytics 4
 
-The production stream is configured with Measurement ID `G-KGPV4QZLKS`.
+The production stream is configured with Measurement ID `G-0KEFVWQ33N`.
 `VITE_GA_MEASUREMENT_ID` can optionally override it for another environment.
 Rebuild and redeploy the website after analytics code changes.
 
