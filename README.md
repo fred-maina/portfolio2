@@ -1,55 +1,64 @@
-# React + TypeScript + Vite
+# Fred Maina — portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An editorial portfolio with project case studies and embedded Google Calendar
+scheduling, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Updating portfolio content
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Edit [`src/data.ts`](src/data.ts) when your job, biography, projects, links,
+contact details, CV, or coffee-chat settings change. `src/App.tsx` is the page
+layout and should not need routine content edits.
 
-## Expanding the ESLint configuration
+The editable sections are:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `profile`: name, headline, introduction, current role, and portrait
+- `links`: CV, email, LinkedIn, and GitHub
+- `projects`: project descriptions, evidence, images, links, and stacks
+- `experience`: employers, roles, dates, summaries, and highlights
+- `about`: biography, tools, education, and certification
+- `coffee`: booking description, details, and Google Calendar URL
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Images
+
+Live assets in `public`:
+
+- `favicon-48.png`
+- `apple-touch-icon.png`
+- `fred-maina-transparent-clean.webp`
+- `multitouch-storefront.webp`
+- `multitouch-product.webp`
+- `multitouch-admin.webp`
+- `anonmsg-conversation.webp`
+- `og-image.jpg`
+
+The site also includes a custom `public/404.html`, Vercel permanent redirects
+in `vercel.json`, locally hosted fonts, and responsive `-720.webp` image
+variants for smaller screens.
+
+## Commands
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm audit
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Google Analytics 4
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The production stream is configured with Measurement ID `G-KGPV4QZLKS`.
+`VITE_GA_MEASUREMENT_ID` can optionally override it for another environment.
+Rebuild and redeploy the website after analytics code changes.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# portfolio2
+The site records these custom events:
+
+- `view_cv`
+- `book_coffee`
+- `view_available_times`
+- `view_project` with a `project` parameter
+- `contact_email`
+- `linkedin_click` with a `placement` parameter
+- `open_social_profile` with a `network` parameter
+
+Events appear in GA4 under **Reports → Engagement → Events**. Traffic sources
+appear under **Reports → Acquisition → Traffic acquisition**.
