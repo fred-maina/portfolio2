@@ -24,15 +24,27 @@ const measurementId =
 export function initializeAnalytics() {
   if (!measurementId || typeof window === 'undefined' || window.gtag) return;
 
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
-  document.head.appendChild(script);
-
   const dataLayer = (window.dataLayer = window.dataLayer || []);
   window.gtag = (...args: unknown[]) => dataLayer.push(args);
   window.gtag('js', new Date());
   window.gtag('config', measurementId, { send_page_view: true });
+
+  let loaded = false;
+  const loadGoogleTag = () => {
+    if (loaded) return;
+    loaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+    document.head.appendChild(script);
+  };
+
+  // Keep third-party analytics off the critical rendering path. Interactions
+  // load it immediately; otherwise it loads after the page has settled.
+  ['pointerdown', 'keydown', 'touchstart'].forEach((eventName) =>
+    window.addEventListener(eventName, loadGoogleTag, { once: true, passive: true }),
+  );
+  window.setTimeout(loadGoogleTag, 5000);
 }
 
 export function trackEvent(name: AnalyticsEvent, parameters: EventParameters = {}) {

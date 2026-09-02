@@ -14,7 +14,8 @@ function Reveal({children,className=''}:{children:ReactNode,className?:string}){
 function ProjectShot({src,label,className=''}:{src:string,label:string,className?:string}){
   const [loaded,setLoaded]=useState(true);
   const smallSrc=src.replace(/\.webp$/, '-720.webp');
-  return <figure className={`project-shot ${className} ${loaded?'':'shot-empty'}`}>{loaded?<><img src={src} srcSet={`${smallSrc} 720w, ${src} 1920w`} sizes={className.includes('shot-wide')?'(max-width: 800px) 100vw, 92vw':'(max-width: 800px) 100vw, 50vw'} width="1920" height="1243" alt={label} loading="lazy" decoding="async" onError={()=>setLoaded(false)}/><figcaption>{label}</figcaption></>:<div><span>Project image</span><p>Add {src.replace('/','public/')}</p></div>}</figure>;
+  const mediumSrc=src.replace(/\.webp$/, '-1280.webp');
+  return <figure className={`project-shot ${className} ${loaded?'':'shot-empty'}`}>{loaded?<><img src={src} srcSet={`${smallSrc} 720w, ${mediumSrc} 1280w, ${src} 1920w`} sizes={className.includes('shot-wide')?'(max-width: 800px) calc(100vw - 44px), (max-width: 1400px) 80vw, 1180px':'(max-width: 800px) calc(100vw - 44px), (max-width: 1400px) 45vw, 620px'} width="1920" height="1243" alt={label} loading="lazy" decoding="async" onError={()=>setLoaded(false)}/><figcaption>{label}</figcaption></>:<div><span>Project image</span><p>Add {src.replace('/','public/')}</p></div>}</figure>;
 }
 
 export default function App(){
@@ -28,7 +29,7 @@ export default function App(){
     <main id="top">
       <section className="hero">
         <div className="hero-copy"><p className="kicker">{profile.name} · {profile.disciplines.join(' · ')}</p><h1>{profile.headline[0]}<br/>{profile.headline[1]}<br/><em>{profile.headlineEmphasis}</em></h1><p className="hero-intro">{profile.introduction}</p><div className="hero-actions"><a className="primary-action" href={links.resume} target="_blank" rel="noreferrer" onClick={()=>trackEvent('view_cv',{placement:'hero'})}>View my CV <ArrowUpRight size={17}/></a><a className="secondary-action" href="#coffee" onClick={()=>trackEvent('book_coffee',{placement:'hero'})}><Coffee size={17}/>Book a coffee chat</a></div><a className="inline-link" href="#work">See selected work <ArrowRight size={17}/></a></div>
-        <figure className={`portrait ${portrait?'':'portrait-fallback'}`}>{portrait?<img src={profile.portrait.src} srcSet="/fred-maina-transparent-clean-720.webp 720w, /fred-maina-transparent-clean.webp 1011w" sizes="(max-width: 800px) 88vw, (max-width: 1200px) 38vw, 590px" alt={profile.portrait.alt} width={profile.portrait.width} height={profile.portrait.height} decoding="async" fetchPriority="high" onError={()=>setPortrait(false)}/>:<span>{profile.initials}</span>}</figure>
+        <figure className={`portrait ${portrait?'':'portrait-fallback'}`}>{portrait?<img src={profile.portrait.src} srcSet="/fred-maina-transparent-clean-480.webp 480w, /fred-maina-transparent-clean-720.webp 720w, /fred-maina-transparent-clean.webp 1011w" sizes="(max-width: 800px) 88vw, (max-width: 1200px) 38vw, 590px" alt={profile.portrait.alt} width={profile.portrait.width} height={profile.portrait.height} decoding="async" fetchPriority="high" onError={()=>setPortrait(false)}/>:<span>{profile.initials}</span>}</figure>
       </section>
       <div className="current"><strong>{profile.currentLabel}</strong><span>{profile.currentRole}</span></div>
 
