@@ -1,65 +1,59 @@
-# Fred Maina — portfolio
+# Fredrick Maina — portfolio
 
-An editorial portfolio with project case studies and embedded Google Calendar
-scheduling, built with React, TypeScript, and Vite.
+A statically generated editorial portfolio. The delivered page contains the
+complete HTML, so it works without React and can be read directly with `curl`.
 
 ## Updating portfolio content
 
-Edit [`src/data.ts`](src/data.ts) when your job, biography, projects, links,
-contact details, CV, or coffee-chat settings change. `src/App.tsx` is the page
-layout and should not need routine content edits.
+Edit [`content/portfolio.mjs`](content/portfolio.mjs) when your job, biography,
+projects, links, contact details, CV, or coffee-chat settings change. Then run:
 
-The editable sections are:
+```bash
+npm run render
+```
 
-- `profile`: name, headline, introduction, current role, and portrait
-- `links`: CV, email, LinkedIn, and GitHub
-- `projects`: project descriptions, evidence, images, links, and stacks
-- `experience`: employers, roles, dates, summaries, and highlights
-- `about`: biography, tools, education, and certification
-- `coffee`: booking description, details, and Google Calendar URL
-
-## Images
-
-Live assets in `public`:
-
-- `favicon-48.png`
-- `apple-touch-icon.png`
-- `fred-maina-transparent-clean.webp`
-- `multitouch-storefront.webp`
-- `multitouch-product.webp`
-- `multitouch-admin.webp`
-- `anonmsg-conversation.webp`
-- `og-image.jpg`
-
-The site also includes a custom `public/404.html`, Vercel permanent redirects
-in `vercel.json`, locally hosted fonts, and responsive `-720.webp` image
-variants for smaller screens.
+The generator writes `index.html`. The editable sections are `profile`,
+`links`, `projects`, `experience`, `about`, and `coffee`.
 
 ## Commands
 
 ```bash
-npm run dev
-npm run build
+npm run dev      # render the HTML and start the local server
+npm run render   # regenerate index.html after content edits
+npm run build    # render and create the deployable dist directory
+npm run preview  # serve the production build
 npm run lint
 npm audit
 ```
 
+The `dist` directory can be hosted by any static host. Vercel additionally uses
+`vercel.json` for redirects and `public/404.html` for missing pages.
+
+## Structure
+
+- `content/portfolio.mjs`: editable portfolio content
+- `scripts/render-site.mjs`: static HTML generator
+- `src/index.template.html`: document template and metadata
+- `src/site.js`: navigation, reveals, analytics, and calendar enhancement
+- `src/index.css` and `src/site.css`: site styling
+- `public`: images, fonts, favicon, social image, sitemap, robots, and 404 page
+
+Responsive image variants use `-720.webp` and `-1280.webp` suffixes. The
+portrait also has a `-480.webp` variant.
+
 ## Google Analytics 4
 
-The production stream is configured with Measurement ID `G-0KEFVWQ33N`.
-`VITE_GA_MEASUREMENT_ID` can optionally override it for another environment.
-Rebuild and redeploy the website after analytics code changes.
+The production stream uses Measurement ID `G-0KEFVWQ33N`. The Google script is
+kept off the critical rendering path and loads on first interaction or after
+five seconds. Events are queued before it loads.
 
-The site records these custom events:
+Tracked events:
 
 - `view_cv`
 - `book_coffee`
-- `open_booking_page` for the mobile Google Calendar handoff
+- `open_booking_page`
 - `view_available_times`
-- `view_project` with a `project` parameter
+- `view_project` with `project`
 - `contact_email`
-- `linkedin_click` with a `placement` parameter
-- `open_social_profile` with a `network` parameter
-
-Events appear in GA4 under **Reports → Engagement → Events**. Traffic sources
-appear under **Reports → Acquisition → Traffic acquisition**.
+- `linkedin_click` with `placement`
+- `open_social_profile` with `network`
