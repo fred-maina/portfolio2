@@ -92,7 +92,7 @@ export const portfolio = {
   },
   coffee: {
     heading: ['Book a coffee', 'chat with me.'],
-    description: 'Choose a time for an online conversation about a technical question, an early product idea, your career, or anything else you would genuinely like to explore.',
+    description: 'Choose a time for an online conversation—whether you have an idea or technical question to explore, an opportunity you think I could contribute to, career advice to share, or simply want to have a coffee chat.',
     details: '30 minutes · Google Meet · Nairobi time',
     calendarUrl: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0guQvJSiZx1gUCwbxcV64ieIg_pvpvK5hlN5u2Avplb5mVVI1Ifn6hkPp5D6sOZwaM4E_g08aL?gv=true',
   },
