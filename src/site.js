@@ -76,15 +76,31 @@ document.querySelectorAll(".project-shot img, .portrait img").forEach((image) =>
 );
 
 const bookingFrame = document.querySelector("#booking-calendar");
+const coffeeSection = document.querySelector("#coffee");
 const bookingQuery = window.matchMedia("(min-width: 801px)");
+let bookingObserver;
 const updateBookingFrame = () => {
-  if (
-    bookingQuery.matches &&
-    bookingFrame &&
-    !bookingFrame.getAttribute("src")
-  ) {
+  if (!bookingQuery.matches || !bookingFrame || !coffeeSection) return;
+  const bounds = coffeeSection.getBoundingClientRect();
+  if (bounds.top > window.innerHeight + 400 || bounds.bottom < -400) return;
+  if (!bookingFrame.getAttribute("src"))
     bookingFrame.src = bookingFrame.dataset.src;
-  }
+  bookingObserver?.disconnect();
+  bookingQuery.removeEventListener("change", updateBookingFrame);
+  window.removeEventListener("scroll", updateBookingFrame);
+  window.removeEventListener("resize", updateBookingFrame);
 };
-updateBookingFrame();
-bookingQuery.addEventListener("change", updateBookingFrame);
+
+if (bookingFrame && coffeeSection) {
+  bookingQuery.addEventListener("change", updateBookingFrame);
+  if ("IntersectionObserver" in window) {
+    bookingObserver = new IntersectionObserver(updateBookingFrame, {
+      rootMargin: "400px 0px",
+    });
+    bookingObserver.observe(coffeeSection);
+  } else {
+    window.addEventListener("scroll", updateBookingFrame, { passive: true });
+    window.addEventListener("resize", updateBookingFrame);
+  }
+  updateBookingFrame();
+}
