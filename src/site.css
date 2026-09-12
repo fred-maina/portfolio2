@@ -994,6 +994,17 @@ footer small {
 }
 
 /* Static HTML stays readable without JavaScript; motion is progressively enhanced. */
+html:not(.js) .booking-shell,
+html:not(.js) .desktop-booking-link,
+html:not(.js) .menu-button {
+  display: none;
+}
+html:not(.js) .mobile-booking-card {
+  display: flex;
+}
+html:not(.js) .site-shell nav {
+  display: flex;
+}
 .reveal {
   opacity: 1;
   transform: none;
